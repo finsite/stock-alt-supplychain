@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-alt-supplychain
+  labels:
+    app: stock-alt-supplychain
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stock-alt-supplychain
+  template:
+    metadata:
+      labels:
+        app: stock-alt-supplychain
+    spec:
+      containers:
+      - name: stock-alt-supplychain
+        image: stock-alt-supplychain:latest
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stock-alt-supplychain
+spec:
+  type: ClusterIP
+  selector:
+    app: stock-alt-supplychain
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
