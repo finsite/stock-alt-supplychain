@@ -19,8 +19,7 @@ LOGISTICS_KEYWORDS = {"port", "shipping", "freight", "logistics", "transit"}
 
 
 def process(payloads: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """
-    Process a batch of supply chain-related messages.
+    """Process a batch of supply chain-related messages.
 
     Detects keywords indicating supply chain issues or risks and
     annotates the payload with simplified tags.
@@ -34,6 +33,7 @@ def process(payloads: list[dict[str, Any]]) -> list[dict[str, Any]]:
     -------
     list[dict[str, Any]]
         Enriched messages with issue classification.
+
     """
     results: list[dict[str, Any]] = []
 
